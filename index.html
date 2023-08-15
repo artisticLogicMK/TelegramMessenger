@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#26293A">
+  <meta name="description" content="A little app for sending messages to your Telegram group." />
+  <meta property="og:image" content="https://groupsender.netlify.app/thumb.jpg" />
+  <title>Send Message to Telegram Group</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+  <script src="tail.js"></script>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body class="flex items-center justify-center bg-[#26293A]">
+  <div class="w-full sm:max-w-sm mx-4 my-10">
+    <h1 class="text-white font-semibold text-xl mb-5 text-center">Telegram Group Sender</h1>
+    <form id="myForm">
+      <div id="alert" class="hidden mb-3 before:border before:border-transparent before:rounded-sm before:px-3 before:py-1 text-jsm text-start"></div>
+      
+      <div class="inputContainer group mb-3 bg-[#212332] border border-transparent focus-within:border-[#33A8E3] px-3 py-2 rounded-md">
+        <label class="text-[#33A8E3] font-semibold text-sm mb-1">Bot ID and Token</label>
+        <textarea name="botIDAndToken" rows="2" class="w-full bg-transparent text-white text-base py-1"></textarea>
+      </div>
+      
+      <div class="inputContainer group mb-3 bg-[#212332] border border-transparent focus-within:border-[#33A8E3] px-3 py-3 rounded-md">
+        <label class="text-[#33A8E3] font-semibold text-sm mb-1">Group ID/Username</label>
+        <input type="text" name="groupID" class="w-full bg-transparent text-white text-base py-1" />
+      </div>
+      
+      <div class="inputContainer group mb-5 bg-[#212332] border border-transparent focus-within:border-[#33A8E3] px-3 py-2 rounded-md">
+        <label class="text-[#33A8E3] font-semibold text-sm mb-1">Message</label>
+        <textarea name="message" rows="3" class="w-full bg-transparent text-white text-base py-1"></textarea>
+      </div>
+      
+      <div class="flex justify-between items-end">
+        <a href="" target="_blank" class="text-[#33A8E3] underline underline-offset-4">How to get these credentials.</a>
+        <button type="submit" class="bg-[#33A8E3] text-white text-bas font-semibold rounded-sm px-4 py-2 active:opacity-50">SEND</button>
+      </div>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+*:focus{
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+#alert::before{
+  content: "Sending...";
+  color: white;
+}
+#alert.success::before{
+  content: "Message sent successfully";
+  color: #43b645;
+  border-color: #43b645;
+  background: #43b64530;
+}
+#alert.fail::before{
+  content: "Error sending message. Recheck credentials.";
+  color: #c35151;
+  border-color: #c35151;
+  background: #c3515130;
+}
